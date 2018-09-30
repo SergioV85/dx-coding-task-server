@@ -4,3 +4,7 @@ jspm_packages
 
 # Serverless directories
 .serverless
+
+# Code coverage stat
+.nyc_output
+coverage
