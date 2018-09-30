@@ -1,0 +1,17 @@
+service: dx-cash-dispenser-app
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-central-1
+  stage: prod
+
+functions:
+  serverVersion:
+    handler: server-version.handler
+    events:
+      - http: 'GET /server-version'
+  requestAmount:
+    handler: request-amount.handler
+    events:
+      - http: 'GET /amount'
